@@ -1,0 +1,21 @@
+# yum install git
+
+# git clone https://github.com/FISCO-BCOS/generator.git
+
+# cd ~/generator && bash ./scripts/install.sh
+
+# yum list |grep pip
+
+# yum -y install epel-release
+
+# yum list |grep pip
+
+# yum install python2-pip
+
+# cd ~/generator && bash ./scripts/install.sh
+
+(pip install --upgrade pip)
+
+# ./generator -h
+
+# ./generator --download_fisco ./meta
