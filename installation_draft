@@ -1,0 +1,333 @@
+[root@dlwybap1 ~]# git clone https://github.com/FISCO-BCOS/generator.git
+bash: git: command not found...
+
+[root@dlwybap1 ~]# yum install git
+
+[root@dlwybap1 ~]# git clone https://github.com/FISCO-BCOS/generator.git
+Cloning into 'generator'...
+remote: Enumerating objects: 60, done.
+remote: Counting objects: 100% (60/60), done.
+remote: Compressing objects: 100% (44/44), done.
+remote: Total 1578 (delta 28), reused 33 (delta 16), pack-reused 1518
+Receiving objects: 100% (1578/1578), 312.51 KiB | 217.00 KiB/s, done.
+Resolving deltas: 100% (946/946), done.
+
+[root@dlwybap1 ~]# cd generator/ & bash ./scripts/install.sh
+[1] 19016
+bash: ./scripts/install.sh: No such file or directory
+[1]+  Done                    cd generator/
+[root@dlwybap1 ~]# cd ~/generator && bash ./scripts/install.sh
+ Fedora|CentOS* Platform
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: repos-jnb.psychz.net
+ * extras: mirror.vpsnet.com
+ * updates: mirror.papua.go.id
+No package python-pip available.
+Package 1:openssl-1.0.2k-19.el7.x86_64 already installed and latest version
+Package which-2.20-7.el7.x86_64 already installed and latest version
+Resolving Dependencies
+--> Running transaction check
+---> Package curl.x86_64 0:7.29.0-54.el7 will be updated
+---> Package curl.x86_64 0:7.29.0-57.el7_8.1 will be an update
+--> Processing Dependency: libcurl = 7.29.0-57.el7_8.1 for package: curl-7.29.0-57.el7_8.1.x86_64
+--> Running transaction check
+---> Package libcurl.x86_64 0:7.29.0-54.el7 will be updated
+---> Package libcurl.x86_64 0:7.29.0-57.el7_8.1 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package         Arch           Version                   Repository       Size
+================================================================================
+Updating:
+ curl            x86_64         7.29.0-57.el7_8.1         updates         271 k
+Updating for dependencies:
+ libcurl         x86_64         7.29.0-57.el7_8.1         updates         223 k
+
+Transaction Summary
+================================================================================
+Upgrade  1 Package (+1 Dependent package)
+
+Total size: 493 k
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : libcurl-7.29.0-57.el7_8.1.x86_64                             1/4 
+  Updating   : curl-7.29.0-57.el7_8.1.x86_64                                2/4 
+  Cleanup    : curl-7.29.0-54.el7.x86_64                                    3/4 
+  Cleanup    : libcurl-7.29.0-54.el7.x86_64                                 4/4 
+  Verifying  : libcurl-7.29.0-57.el7_8.1.x86_64                             1/4 
+  Verifying  : curl-7.29.0-57.el7_8.1.x86_64                                2/4 
+  Verifying  : libcurl-7.29.0-54.el7.x86_64                                 3/4 
+  Verifying  : curl-7.29.0-54.el7.x86_64                                    4/4 
+
+Updated:
+  curl.x86_64 0:7.29.0-57.el7_8.1                                               
+
+Dependency Updated:
+  libcurl.x86_64 0:7.29.0-57.el7_8.1                                            
+
+Complete!
+./scripts/install.sh: line 128: pip: command not found
+python and pip is not same version
+python -V, get version => 2
+Python 2.7.5
+pip -V, get version => not
+./scripts/install.sh: line 146: not: command not found
+
+[root@dlwybap1 generator]# python -V
+Python 2.7.5
+[root@dlwybap1 generator]# pip -V
+bash: pip: command not found...
+
+[root@dlwybap1 generator]# pip -V
+bash: pip: command not found...
+[root@dlwybap1 generator]# yum install pip
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.launtel.net.au
+ * extras: ftp.tc.edu.tw
+ * updates: mirror.papua.go.id
+No package pip available.
+Error: Nothing to do
+[root@dlwybap1 generator]# type pip
+bash: type: pip: not found
+[root@dlwybap1 generator]# yum list|grep pip
+libpipeline.x86_64                          1.2.3-3.el7                @anaconda
+libpipeline.i686                            1.2.3-3.el7                base     
+libpipeline-devel.i686                      1.2.3-3.el7                base     
+libpipeline-devel.x86_64                    1.2.3-3.el7                base     
+python3-pip.noarch                          9.0.3-7.el7_7              updates  
+[root@dlwybap1 generator]# yum install pip
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: repos-jnb.psychz.net
+ * extras: mirror.vpsnet.com
+ * updates: mirror.papua.go.id
+No package pip available.
+Error: Nothing to do
+[root@dlwybap1 generator]# yum repolist
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+
+ * base: repos-jnb.psychz.net
+ * extras: www.ftp.saix.net
+ * updates: mirror.wiru.co.za
+repo id                                       repo name                                        status
+base/7/x86_64                                 CentOS-7 - Base                                  10,070
+extras/7/x86_64                               CentOS-7 - Extras                                   413
+updates/7/x86_64                              CentOS-7 - Updates                                1,134
+repolist: 11,617
+[root@dlwybap1 generator]# 
+[root@dlwybap1 generator]# yum list |grep pip
+libpipeline.x86_64                          1.2.3-3.el7                @anaconda
+libpipeline.i686                            1.2.3-3.el7                base     
+libpipeline-devel.i686                      1.2.3-3.el7                base     
+libpipeline-devel.x86_64                    1.2.3-3.el7                base     
+python3-pip.noarch                          9.0.3-7.el7_7              updates  
+[root@dlwybap1 generator]# yum -y install python-pip
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.launtel.net.au
+ * extras: ftp.tc.edu.tw
+ * updates: mirror.papua.go.id
+No package python-pip available.
+Error: Nothing to do
+[root@dlwybap1 generator]# yum -y install epel-release
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirrors.ges.net.pk
+ * extras: ftp.tc.edu.tw
+ * updates: mirror.papua.go.id
+Resolving Dependencies
+--> Running transaction check
+---> Package epel-release.noarch 0:7-11 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=====================================================================================================
+ Package                     Arch                  Version               Repository             Size
+=====================================================================================================
+Installing:
+ epel-release                noarch                7-11                  extras                 15 k
+
+Transaction Summary
+=====================================================================================================
+Install  1 Package
+
+Total download size: 15 k
+Installed size: 24 k
+Downloading packages:
+epel-release-7-11.noarch.rpm                                                  |  15 kB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : epel-release-7-11.noarch                                                          1/1 
+  Verifying  : epel-release-7-11.noarch                                                          1/1 
+
+Installed:
+  epel-release.noarch 0:7-11                                                                         
+
+Complete!
+[root@dlwybap1 generator]# yum list |grep pip
+libpipeline.x86_64                          1.2.3-3.el7                @anaconda
+aespipe.x86_64                              2.4d-2.el7                 epel     
+globus-xio-pipe-driver.x86_64               4.1-1.el7                  epel     
+globus-xio-pipe-driver-devel.x86_64         4.1-1.el7                  epel     
+libpipeline.i686                            1.2.3-3.el7                base     
+libpipeline-devel.i686                      1.2.3-3.el7                base     
+libpipeline-devel.x86_64                    1.2.3-3.el7                base     
+nodejs-unpipe.noarch                        1.0.0-2.el7                epel     
+pdns-backend-pipe.x86_64                    4.1.11-1.el7               epel     
+pipelight-selinux.noarch                    0.1.0-2.el7                epel     
+python-django-pipeline.noarch               1.3.27-1.el7               epel     
+python2-apipkg.noarch                       1.5-5.el7                  epel     
+python2-pip.noarch                          8.1.2-12.el7               epel     
+python3-apipkg.noarch                       1.5-5.el7                  epel     
+python3-pip.noarch                          9.0.3-7.el7_7              updates  
+python34-pip.noarch                         8.1.2-12.el7               epel     
+uwsgi-logger-pipe.x86_64                    2.0.18-8.el7               epel     
+vanessa_socket-pipe.x86_64                  0.0.12-3.el7               epel     
+[root@dlwybap1 generator]# yum install python2-pip
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.launtel.net.au
+ * epel: d2lzkl7pfhq30w.cloudfront.net
+ * extras: ftp.tc.edu.tw
+ * updates: mirror.papua.go.id
+Resolving Dependencies
+--> Running transaction check
+---> Package python2-pip.noarch 0:8.1.2-12.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=====================================================================================================
+ Package                   Arch                 Version                     Repository          Size
+=====================================================================================================
+Installing:
+ python2-pip               noarch               8.1.2-12.el7                epel               1.7 M
+
+Transaction Summary
+=====================================================================================================
+Install  1 Package
+
+Total download size: 1.7 M
+Installed size: 7.2 M
+Is this ok [y/d/N]: y
+Downloading packages:
+warning: /var/cache/yum/x86_64/7/epel/packages/python2-pip-8.1.2-12.el7.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+Public key for python2-pip-8.1.2-12.el7.noarch.rpm is not installed
+python2-pip-8.1.2-12.el7.noarch.rpm                                           | 1.7 MB  00:00:00     
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Importing GPG key 0x352C64E5:
+ Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+ Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+ Package    : epel-release-7-11.noarch (@extras)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Is this ok [y/N]: y
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : python2-pip-8.1.2-12.el7.noarch                                                   1/1 
+  Verifying  : python2-pip-8.1.2-12.el7.noarch                                                   1/1 
+
+Installed:
+  python2-pip.noarch 0:8.1.2-12.el7                                                                  
+
+Complete!
+[root@dlwybap1 generator]# pip -V
+pip 8.1.2 from /usr/lib/python2.7/site-packages (python 2.7)
+[root@dlwybap1 generator]# cd ~/generator && bash ./scripts/install.sh
+ Fedora|CentOS* Platform
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.launtel.net.au
+ * epel: d2lzkl7pfhq30w.cloudfront.net
+ * extras: ftp.tc.edu.tw
+ * updates: mirror.papua.go.id
+Package python2-pip-8.1.2-12.el7.noarch already installed and latest version
+Package 1:openssl-1.0.2k-19.el7.x86_64 already installed and latest version
+Package curl-7.29.0-57.el7_8.1.x86_64 already installed and latest version
+Package which-2.20-7.el7.x86_64 already installed and latest version
+Nothing to do
+Requirement already satisfied (use --upgrade to upgrade): six in /usr/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+Collecting configparser (from -r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/e5/7c/d4ccbcde76b4eea8cbd73b67b88c72578e8b4944d1270021596e80b13deb/configparser-5.0.0.tar.gz (75kB)
+    100% |################################| 81kB 2.0MB/s 
+  Running setup.py (path:/tmp/pip-build-lRCnEc/configparser/setup.py) egg_info for package configparser produced metadata for project name unknown. Fix your #egg=configparser fragments.
+Installing collected packages: unknown
+  Running setup.py install for unknown ... done
+Successfully installed unknown
+You are using pip version 8.1.2, however version 20.2.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+ install generator successful!
+
+[root@dlwybap1 generator]# ./generator -h
+usage: generator [-h] [-v] [-b peers data] [--build_package_only data peers]
+                 [-c data_dir] [--create_group_genesis_with_nodeid data_dir]
+                 [--generate_chain_certificate chain_dir]
+                 [--generate_agency_certificate agency_dir chain_dir agency_name]
+                 [--generate_node_certificate node_dir agency_dir node_name]
+                 [--generate_sdk_certificate sdk_dir agency_dir] [-g] [--cdn]
+                 [--generate_all_certificates cert_dir] [-d cert_dir pkg_dir]
+                 [-m config.ini config.ini] [-p peers config.ini]
+                 [-a group genesis config.ini] [--download_fisco data_dir]
+                 [--download_console data_dir] [--get_sdk_file data_dir]
+
+Build install pkg for multi chain and manage the chain package with ansible.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         show generator's version.
+
+ Build, Expand, Export, List Chain Package Options :
+  -b peers data, --build_install_package peers data
+                        build chain packages with node_deployment.ini
+  --build_package_only data peers
+                        build chain packages with node_deployment.ini, without
+                        any certificates
+  -c data_dir, --create_group_genesis data_dir
+                        create group genesis with group_genesis.ini.
+  --create_group_genesis_with_nodeid data_dir
+                        create group genesis with group_genesis.ini using
+                        node.nodeid.
+
+ Other Tools Options :
+  --generate_chain_certificate chain_dir
+                        generate root cert
+  --generate_agency_certificate agency_dir chain_dir agency_name
+                        generate agency cert
+  --generate_node_certificate node_dir agency_dir node_name
+                        generate node cert
+  --generate_sdk_certificate sdk_dir agency_dir
+                        generate sdk cert
+  -g, --use_guomi       follow gm operation.
+  --cdn                 use cdn to download binary.
+  --generate_all_certificates cert_dir
+                        create cert by node_deployment.ini
+  -d cert_dir pkg_dir, --deploy_private_key cert_dir pkg_dir
+                        deploy node.key from cert_dir to pkg_dircert
+  -m config.ini config.ini, --merge_config config.ini config.ini
+                        concatenate two config.ini
+  -p peers config.ini, --add_peers peers config.ini
+                        add peers to config.ini
+  -a group genesis config.ini, --add_group group genesis config.ini
+                        add peers to config.ini
+  --download_fisco data_dir
+                        download fisco-bcos
+  --download_console data_dir
+                        download console
+  --get_sdk_file data_dir
+                        get sdk file
+
+
+[root@dlwybap1 generator]# ./generator --download_fisco ./meta
+ERROR |    Download fisco-bcos failed, Please check your network! 
